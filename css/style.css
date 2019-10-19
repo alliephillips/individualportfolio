@@ -1,0 +1,8 @@
+body{
+  font-family: "Arial"
+}
+
+.about-image{
+  max-height: 100px;
+  overflow: hidden;
+}
