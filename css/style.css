@@ -156,7 +156,7 @@ p{
 .gallery{
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-content: center;
   padding-bottom: 6%;
   margin: 2%;
   grid-gap: 15px;
