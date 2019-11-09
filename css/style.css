@@ -1,8 +1,360 @@
-body{
-  font-family: "Arial"
+html{
+  scroll-behavior: smooth;
 }
 
-.about-image{
-  max-height: 100px;
-  overflow: hidden;
+body{
+  font-family: "Long Island", serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #ffe9f2;
+}
+
+.nav ul{
+  /* font-family: "Long Island", "Helvetica", "Arial"; */
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.nav li{
+  display: block;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.nav a{
+  color: black;
+  /* font-family: "Long Island", serif; */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+.nav li a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+  top: 0px;
+}
+
+:focus{
+  border: 2px solid black;
+}
+
+.nav li a.current{
+  text-transform: uppercase;
+}
+
+header{
+  text-align: center;
+  padding: 15px;
+}
+
+h1{
+  font-size: 40px;
+  /* font-family: "Long Island"; */
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-rendering: optimizeLegibility;
+  text-shadow: 2px 2px #A9A9A9;
+}
+
+.about-image img{
+  padding-top: 15px;
+  padding-left:15px;
+  padding-right:15px;
+  max-width: 40%;
+  height: auto;
+}
+
+.parallax{
+  background-image: url("../images/football.jpeg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+}
+
+h2{
+  font-size: 25px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  /* font-family: "Long Island"; */
+}
+
+h3{
+  padding-top: 20px;
+  /* font-family: "Long Island"; */
+}
+
+p{
+  font-size: 16px;
+  font-weight: normal;
+  /* font-family: "Long Island"; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.myexperience h3{
+  font-size: 20px;
+  /* font-family: "Long Island"; */
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.myexperience h4{
+  font-size: 17px;
+  /* font-family: "Long Island"; */
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+}
+
+.myexperience h5{
+  /* font-family: "Long Island"; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.myexperience p{
+  padding-left: 10px;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.resume p{
+  padding:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding-bottom: 6%;
+  margin: 2%;
+  grid-gap: 15px;
+}
+
+.gallery img{
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .flip-card{
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  perspective: 100px;
+}
+
+.gallery .flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.gallery .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.gallery .flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.gallery .flip-card-front{
+  background-color: #bbb;
+  color: black;
+}
+
+.gallery .flip-card-back{
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gallery .flip-card-back{
+  overflow: auto;
+}
+
+.image-gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+
+.image-gallery img{
+  width: 100%;
+  border: 1px solid black;
+  opacity: 0.5;
+}
+
+.image-gallery img:hover{
+  opacity: 1.0;
+}
+
+.image-gallery p{
+  font-size: 15px;
+}
+
+.resume iframe{
+  width: 600px;
+  height: 700px;
+  resize: both;
+  overflow: auto;
+}
+
+.scale-up-hor-center {
+  text-align: center;
+  font-size: 30px;
+	-webkit-animation: scale-up-hor-center .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center .7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.container iframe{
+  width: 400px;
+  height: 500px;
+  resize: both;
+  overflow: auto;
+  padding: 5px;
+}
+}
+label{
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+label input{
+  margin: 10px;
+}
+
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+form{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-family: "Long Island";
+  font-size: 18px;
+}
+legend{
+  padding-bottom: 10px;
+}
+label{
+  padding-top: 20px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 30px;
+  position: absolute;
+  width:100%;
+  font-family: "Long Island";
+}
+
+@media all and (min-width: 600px){
+  .gallery{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+  .image-gallery{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+  .nav li{
+    display: inline;
+    padding-right: 10px;
+    border-bottom: none;
+}
+
+@media all and (min-width: 900px){
+  .gallery{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+  .image-gallery{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top: 0;
+  }
 }
